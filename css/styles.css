@@ -1,0 +1,905 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura completa de la ventana */
+    background: #0c192c !important;
+}
+
+/* Estilos y Animaciones del Spinner */
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+  display: none; /* Oculto por defecto */
+  justify-content: center; /* Centra el spinner horizontalmente */
+  align-items: center; /* Centra el spinner verticalmente */
+  z-index: 9999; /* Asegúrate de que esté encima de todo */
+}
+
+.gear{
+  margin-left: -170px;
+  margin-bottom: -95px;
+}
+
+.spinner {
+  animation: rotate-gear 2s linear infinite;
+}
+
+@keyframes rotate-gear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reverse .spinner {
+  animation-direction: reverse;
+}   
+
+/* Animaciones error 404 */
+.container-404{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-align: center;
+  background-color: white !important;
+}
+
+.cog-wheel1, .cog-wheel2{
+  transform:scale(0.7);
+  z-index: 2;
+}
+
+.cog1, .cog2{
+  width:36vmin;
+  height:38vmin;
+  border-radius:50%;
+  border:6vmin solid #fdd41e;
+  position: relative;
+  animation: rotate-clockwise 8s linear infinite;
+}
+
+.cog2{
+  border:6vmin solid #4f8a8b;
+  animation: rotate-counterclockwise 8s linear infinite;
+}
+
+.top, .down, .left, .right, .left-top, .left-down, .right-top, .right-down{
+  width:10vmin;
+  height:10vmin;
+  background-color: #fdd41e;
+  position: absolute;
+}
+
+.cog2 .top,.cog2  .down,.cog2  .left,.cog2  .right,.cog2  .left-top,.cog2  .left-down,.cog2  .right-top,.cog2  .right-down{
+  background-color: #4f8a8b;
+}
+
+.top{
+  top:-14vmin;
+  left:9vmin;
+}
+
+.down{
+  bottom:-14vmin;
+  left:9vmin;
+}
+
+.left{
+  left:-14vmin;
+  top:9vmin;
+}
+
+.right{
+  right:-14vmin;
+  top:9vmin;
+}
+
+.left-top{
+  transform:rotateZ(-45deg);
+  left:-8vmin;
+  top:-8vmin;
+}
+
+.left-down{
+  transform:rotateZ(45deg);
+  left:-8vmin;
+  top:25vmin;
+}
+
+.right-top{
+  transform:rotateZ(45deg);
+  right:-8vmin;
+  top:-8vmin;
+}
+
+.right-down{
+  transform:rotateZ(-45deg);
+  right:-8vmin;
+  top:25vmin;
+}
+
+.cog2{
+  position: relative;
+  left:-13.2vmin;
+  bottom:10vmin;
+}
+
+h1{
+  color:#142833;
+}
+
+.first-four{
+  position: relative;
+  left:6vmin;
+  font-size:40vmin;
+}
+
+.second-four{
+  position: relative;
+  right:18vmin;
+  z-index: 0;
+  font-size:40vmin;
+}
+
+.wrong-para{
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  bottom:15vmin;
+  padding:3vmin 12vmin 3vmin 3vmin;
+  font-weight:600;
+  color:#092532;
+}
+
+.container-404 a{
+  position: absolute;
+  bottom:12vmin;
+}
+
+/* Animación de rotación */
+@keyframes rotate-clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Animación del parpadeo del mensaje */
+.wrong-para {
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Animación de la barra de navegación */
+
+/* Navbar Styles */
+.navbar { 
+  background-color: #fdd41e;
+  border-bottom: 2px solid white;
+}
+
+/* Offcanvas width and responsiveness */
+.offcanvas {
+  max-width: 250px; /* You can adjust the width as needed */
+}
+
+.offcanvas-header img {
+  max-width: 100%; /* Ensures logo in offcanvas scales properly */
+}
+
+.navbar li{
+  padding: 0 1rem;
+}
+.navbar li a{
+  font-weight: 600;
+}
+/* Navbar toggler button */
+.navbar-toggler {
+  background: #0c192c !important;
+}
+
+.navbar-toggler:hover {
+  background-color: rgb(53, 52, 52) !important;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+/* Icon style */
+.bi-gear-fill {
+  font-size: larger;
+  color: white;
+}
+
+/* Logo on small screens */
+.navbar img.d-none.d-lg-block {
+  display: block;
+}
+
+/* Estilos del Footer */
+
+footer {
+  margin-top: auto; /* Empuja el footer al final */
+  background-color: #f8f9fa; /* Color de fondo para que resalte */
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+  z-index: 1000; /* Para asegurarse de que esté siempre visible */
+  border-top: 1px solid #dee2e6; /* Línea superior para separar el footer */
+}
+
+footer p {
+  margin: 0; /* Evita espacios no deseados */
+  font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  text-align: center; /* Centra el texto en dispositivos más pequeños */
+}
+
+footer img {
+  max-width: 130px; /* Asegura que la imagen no sea demasiado grande */
+  height: auto; /* Mantiene las proporciones */
+}
+
+.d-flex{
+  width: 100%;
+  justify-content: space-between !important;
+  padding: 0 2rem;
+}
+
+.d-flex p{
+  text-align: start;
+}
+.d-flex a{
+  text-align: end;
+}
+
+/* Estilos del Home */
+.container-home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white ;
+  padding: 0 2rem 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 30px #e9c200 !important;
+}
+
+.modal-header h3 {
+  padding-top: 2rem;
+  border-bottom: 2px solid #ffd814;
+}
+
+.section-home .container-home{
+  font-family: "Roboto";
+}
+.bi-tools{
+  padding-left: .5rem;
+}
+
+.modal-header{
+  flex-direction: column;
+  padding-bottom: 2rem !important;
+}
+
+.datesUser{
+  width: 35% !important;
+  padding: 0 2rem 0 0 !important;
+
+}
+
+.modal-content{
+  padding: 1rem 2rem;
+}
+
+.content-form, .list-group, .chat-box {
+  border-top: 4px solid #fdd302 !important; /* Borde superior amarillo */
+  border: 2px solid #ccc ;       /* Bordes grises */
+  border-radius: 12px !important;         /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.container-home label{
+  font-style: oblique;
+  font-weight: 500;
+} 
+
+.cuadro-detalle{
+  display: flex;
+} 
+
+.btn-style{
+  background-color: #fdd302;
+  text-align: center;
+  font-size: 1rem;
+  width: 7rem;
+  padding: 5px;
+  border: 1px solid #fdd302;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-style:hover{
+  background-color: #ffd814;
+  transition: 0.5s ease-in-out ;
+}
+
+.activos h3, p, .dbmain h3, p{
+  text-align: center;
+}
+
+.radios{
+  padding-top: 5px;
+  display: flex;
+}
+
+.send{
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body h4, .datesUser h5{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.datesUser .modal-body h4{
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ffd814;
+  margin-bottom: 16px;
+}
+
+.modal-body h4, .chat, .section-detalles .container-detalles .dates h4{
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 25px;
+}
+
+.form-select, .form-control, .form-check-input {
+  padding: 10px !important; 
+}
+
+.form-select:focus, .form-control:focus, .form-check-input:focus{
+  box-shadow: 0 0 0 .10rem #fdd302 !important;
+  border-color: #fdd302 !important;
+}
+
+.form-check-input:checked{
+  background-color: black !important;
+  border-color: #fdd302 !important;
+}
+
+.search-container {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+/* Estilos de la vista de Solicitudes */
+
+
+.section-solicitudes, .section-detalles, .section-home, .section-main{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-solicitudes, .container-detalles, .hero{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 30px #e9c200 !important;
+}
+
+.section-solicitudes .back{
+  display: flex;
+  justify-content: center;
+}
+
+.section-solicitudes .btn-style{
+    padding: .3rem;
+    background-color: #fdd302;
+    border: 1px solid #fdd302;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.container-detalles{
+  width: 90% !important;
+}
+
+.detalles{
+  padding: 2rem;
+}
+
+.buttons{
+  padding-top: 2rem;
+}
+.container-detalles .modal-header{
+  padding-bottom: 0 !important;
+}
+
+.container-detalles .historial{
+  width: 25%;
+}
+
+.container-detalles .modal-content .back{
+  padding-top: 2rem;
+}
+
+.section-detalles .container-detalles .tablaDatos{
+  width: 25% !important;
+}
+
+.section-detalles .container-detalles .dates{
+  width: 50% !important;
+  padding-top: 1rem;
+}
+
+.section-detalles .container-detalles .chat-box{
+  padding: 1rem 2rem;
+}
+
+.bi-circle-fill{
+  color: green;
+  padding-left: .5rem;
+  font-size: .7rem;
+}
+
+.chat-messages{
+  min-height: 215px !important;
+  border-bottom: 2px solid #eee;
+
+}
+
+.chat-input{
+  display: flex;
+  padding-top: .5rem;
+}
+
+.section-detalles .container-detalles .chat-box input{
+  border-radius: 12px 0 0 12px;
+}
+
+.section-detalles .container-detalles .chat-box button{
+  border-radius: 0px 12px 12px 0;
+}
+
+/* Estilos de los modal */
+
+.modal-fade .modal-dialog .headerModal .titleModal{
+  width: 50% !important;
+}
+
+.modal-fade .modal-dialog  .modal-content .headerModal {
+  display: ruby !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* Estilos del Home */
+
+.hero {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px rgba(0, 128, 255, 0.3), 8px 4px 8px rgba(0, 255, 255, 0.2);
+    width: 90%;
+    max-width: 1200px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+}
+.hero-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.section-main .btn-style {
+  padding: .7rem;
+  width: 30%;
+  background-color: #fdd302;
+  border: 1px solid #fdd302;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+
+}
+
+.section-main .btn-style:hover{
+  border: 1px solid #0c192c;
+  background-color: #e0bb00;
+}
+
+.col-md-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Dispositivos pequeños (teléfonos, menos de 576px) */
+@media (max-width: 475px) {
+  .section-main, .section-home, .section-solicitudes, .section-detalles{
+    padding-top: 4rem;
+    padding-bottom: .8rem;
+  }
+
+  .section-main .hero{
+    padding: .3rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .navbar .offcanvas{
+    width: 50% !important;
+  }
+
+  .navbar img.d-none.d-lg-block {
+    display: none; /* Hide the logo on mobile */
+  }
+
+  .offcanvas-body {
+    padding-top: 20px; /* Adjust padding for mobile */
+  }
+  .section-main .hero h1{
+    font-size: 1.5rem;
+  }
+  .section-main .hero p{
+    padding-bottom: .5rem;
+    font-size: 1rem;
+  }
+
+  .section-main .hero img{
+    padding-top: 2rem;
+    width: 50%;
+  }
+
+  .section-main .hero .btn-style{
+    padding: 0rem;
+    font-size: .8rem;
+    width: 40%;
+  }
+
+  .section-home{
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .section-home .container-home .datesUser{
+    display: none;
+  }
+  .section-home .container-home .modal-body .radios, .section-detalles .container-detalles .modal-dialog .radios{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .section-solicitudes .container-solicitudes{
+    width: 90%;
+  }
+  .section-home .container-home .modal-dialog{
+    max-width: 100% ;
+  }
+
+  .container-detalles{
+    padding: 0 0 1rem 0;
+  }
+  .section-detalles .container-detalles .modals .btn-style{
+    width: 6rem;
+  }
+  .section-detalles .container-detalles .modal-dialog {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen en nuevas líneas */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+      flex: 1 0 100%; /* Ambos ocupan espacio proporcional */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+    padding: 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog .dates {
+    flex: 0 0 100%; /* Ocupa el ancho completo de la línea */
+    padding: 2rem 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog .historial .chat-messages{
+    min-height: 250px !important;
+  }
+
+  .section-detalles .container-detalles .modal-header p{
+    padding: 0 1rem;
+  }
+
+  .section-detalles .container-detalles .modals .container{
+    display: grid;
+    max-width: 10% !important;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 1rem; /* Espacio entre los botones */
+  }
+  
+  .container button {
+    width: 100%; /* Asegura que los botones ocupen toda la columna */
+  }
+}
+
+/* Dispositivos medianos (tabletas verticales, entre 576px y 768px) */
+@media (min-width: 476px) and (max-width: 767px) {
+  .section-main, .section-home, .section-solicitudes, .section-detalles{
+    padding-top: 4rem;
+    padding-bottom: .8rem;
+  }
+
+  .section-main .hero{
+    padding: .3rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .section-main .hero h1{
+    font-size: 1.5rem;
+  }
+  .section-main .hero p{
+    padding-bottom: .5rem;
+    font-size: 1rem;
+  }
+
+  .section-main .hero img{
+    padding-top: 2rem;
+    width: 50%;
+  }
+
+  .navbar .offcanvas{
+    width: 50% !important;
+  }
+
+  .section-main .hero .btn-style{
+    padding: 0.2rem;
+    font-size: .8rem;
+  }
+
+  .section-home{
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .section-home .container-home .modal-body .radios, .section-detalles .container-detalles .modal-dialog .radios{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .section-solicitudes .container-solicitudes{
+    width: 90%;
+  }
+  .section-home .container-home .modal-dialog{
+    max-width: 100% ;
+  }
+
+  .container-detalles{
+    padding: 0 0 1rem 0;
+  }
+  .section-detalles .container-detalles .modals .btn-style{
+    width: 6rem;
+  }
+  .section-detalles .container-detalles .modal-dialog {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen en nuevas líneas */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+      flex: 1 1 auto; /* Ambos ocupan espacio proporcional */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+    order: 1; /* Coloca estos elementos arriba */
+    padding: 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog .dates {
+    flex: 0 0 100%; /* Ocupa el ancho completo de la línea */
+    order: 2; /* Coloca este elemento abajo */
+    padding: 2rem 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog .historial .chat-messages{
+    min-height: 250px !important;
+  }
+}
+
+/* Dispositivos grandes (tabletas horizontales y laptops pequeñas, entre 768px y 992px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .section-main, .section-home, .section-solicitudes, .section-detalles{
+    padding-top: 4rem;
+    padding-bottom: .8rem;
+  }
+
+  .section-main .hero{
+    padding: .3rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .section-main .hero p{
+    padding-bottom: .5rem;
+  }
+  .section-main .hero .btn-style{
+    padding: 0.2rem;
+    width: 40%;
+  }
+
+  .section-home .container-home{
+    max-width: 90% !important;
+  }
+
+  .section-home .container-home .datesUser{
+    text-align: center;
+  }
+
+  .section-home .container-home .modal-body .radios, .section-detalles .container-detalles .modal-dialog .radios{
+    padding-top: 0px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-solicitudes .container-solicitudes{
+    width: 90%;
+  }
+
+  .navbar .offcanvas{
+    width: 50% !important;
+  }
+  
+  .section-home .container-home .modal-dialog{
+    max-width: 100% ;
+  }
+
+  .section-detalles .container-detalles .modal-dialog {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen en nuevas líneas */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+      flex: 1 1 auto; /* Ambos ocupan espacio proporcional */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+    order: 1; /* Coloca estos elementos arriba */
+    padding: 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog .dates {
+    flex: 0 0 100%; /* Ocupa el ancho completo de la línea */
+    order: 2; /* Coloca este elemento abajo */
+    padding: 2rem 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog .historial .chat-messages{
+    min-height: 250px !important;
+  }
+
+}
+
+/* Dispositivos más grandes */
+@media (min-width: 1200px) {
+  .section-main, .section-home, .section-solicitudes, .section-detalles{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .section-main .hero{
+    padding: 1rem;
+    width: 80%;
+  }
+
+  .section-main .hero .btn-style{
+    padding: 0.5rem;
+    width: 35%;
+  }
+
+  .section-home .container-home{
+    max-width: 90% !important;
+  }
+
+  .section-home .container-home .datesUser{
+    text-align: center;
+  }
+
+  .section-home .container-home .modal-body .radios, .section-detalles .container-detalles .modal-dialog .radios{
+    padding-top: 0px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-detalles .container-detalles{
+    padding: 0 0 2rem 0;
+  }
+
+  .section-detalles .container-detalles .modal-content{
+    padding: 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos "bajen" si no hay espacio */
+  }
+  
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .dates {
+    flex: 1 1 auto; /* Los dos primeros contenedores ocupan el espacio necesario */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos{
+    padding: 1rem;
+  }
+
+  .section-detalles .container-detalles .modal-dialog .dates{
+    padding: 1rem;
+  }
+  .section-detalles .container-detalles .modal-dialog  .historial {
+    flex: 0 0 100%; /* Este contenedor ocupa toda la fila, "baja" automáticamente */
+  }
+}
+
