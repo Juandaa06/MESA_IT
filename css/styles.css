@@ -881,25 +881,31 @@ footer img {
     padding: 1rem;
   }
 
+
   .section-detalles .container-detalles .modal-dialog {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos "bajen" si no hay espacio */
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen en nuevas líneas */
   }
-  
+
   .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+      flex: 1 1 auto; /* Ambos ocupan espacio proporcional */
+  }
+
+  .section-detalles .container-detalles .modal-dialog .tablaDatos,
+  .section-detalles .container-detalles .modal-dialog .historial {
+    order: 1; /* Coloca estos elementos arriba */
+    padding: 1rem;
+  }
+
   .section-detalles .container-detalles .modal-dialog .dates {
-    flex: 1 1 auto; /* Los dos primeros contenedores ocupan el espacio necesario */
+    flex: 0 0 100%; /* Ocupa el ancho completo de la línea */
+    order: 2; /* Coloca este elemento abajo */
+    padding: 2rem 1rem;
   }
 
-  .section-detalles .container-detalles .modal-dialog .tablaDatos{
-    padding: 1rem;
-  }
-
-  .section-detalles .container-detalles .modal-dialog .dates{
-    padding: 1rem;
-  }
-  .section-detalles .container-detalles .modal-dialog  .historial {
-    flex: 0 0 100%; /* Este contenedor ocupa toda la fila, "baja" automáticamente */
+  .section-detalles .container-detalles .modal-dialog .historial .chat-messages{
+    min-height: 250px !important;
   }
 }
 

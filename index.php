@@ -22,6 +22,7 @@ if (isset($_GET['vista']) && $_GET['vista'] != '404') {
 }
 // Si no se define 'vista' o su valor es '404', también mostrar el error 404
 else {
+    include './inc/navbar.php';
     include './vistas/404.php';
 }
 

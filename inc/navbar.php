@@ -23,7 +23,7 @@
             <a class="nav-link" href="index.php?vista=form">Formulario</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.php?vista=solicitudes">Solicitudes Propias</a>
+            <a class="nav-link" aria-current="page" href="index.php?vista=solicitudes">Solicitudes</a>
           </li>
         </ul>
       </div>
