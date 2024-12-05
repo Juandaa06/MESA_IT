@@ -120,7 +120,7 @@
                 <button type="button" id="ReasignarTarea" class="btn-style" data-bs-toggle="modal" data-bs-target="#modalReasignarTarea">Reasignar</button>
                 <button type="button" id="AsignarTarea" class="btn-style" data-bs-toggle="modal" data-bs-target="#modalAsignarTarea">Asignar</button>
                 <button type="button" id="estadoTarea" class="btn-style" data-bs-toggle="modal" data-bs-target="#modalEstadoTarea">Estado</button>
-                <button type="button" class="btn-style"><a class="nav-link"aria-current="page" href="index.php?vista=solicitudes">Volver</a></button>
+                <button type="button" class="btn-style"><a class="nav-link"aria-current="page" href="/mesa_it/solicitudes">Volver</a></button>
             </div>
             <!-- Modales para cada uno de los botones -->
             <div class="modal fade" id="modalReasignarTarea" tabindex="-1" aria-labelledby="ReasignarTareaLabel" aria-hidden="true">

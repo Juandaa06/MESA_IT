@@ -722,6 +722,10 @@ footer img {
     padding-left: 1rem;
   }
 
+  .section-home .container-home .modal-body .list-group .list-group-item{
+    padding: 8px;
+  }
+
   .section-home .container-home .modal-body .radios, .section-detalles .container-detalles .modal-dialog .radios{
     display: flex;
     justify-content: space-around;
@@ -807,7 +811,7 @@ footer img {
   }
 
   .navbar .offcanvas{
-    width: 50% !important;
+    width: 30% !important;
   }
   
   .section-home .container-home .modal-dialog{
@@ -842,70 +846,4 @@ footer img {
 
 }
 
-/* Dispositivos más grandes */
-@media (min-width: 1200px) {
-  .section-main, .section-home, .section-solicitudes, .section-detalles{
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-  }
-
-  .section-main .hero{
-    padding: 1rem;
-    width: 80%;
-  }
-
-  .section-main .hero .btn-style{
-    padding: 0.5rem;
-    width: 35%;
-  }
-
-  .section-home .container-home{
-    max-width: 90% !important;
-  }
-
-  .section-home .container-home .datesUser{
-    text-align: center;
-  }
-
-  .section-home .container-home .modal-body .radios, .section-detalles .container-detalles .modal-dialog .radios{
-    padding-top: 0px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section-detalles .container-detalles{
-    padding: 0 0 2rem 0;
-  }
-
-  .section-detalles .container-detalles .modal-content{
-    padding: 1rem;
-  }
-
-
-  .section-detalles .container-detalles .modal-dialog {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se reorganicen en nuevas líneas */
-  }
-
-  .section-detalles .container-detalles .modal-dialog .tablaDatos,
-  .section-detalles .container-detalles .modal-dialog .historial {
-      flex: 1 1 auto; /* Ambos ocupan espacio proporcional */
-  }
-
-  .section-detalles .container-detalles .modal-dialog .tablaDatos,
-  .section-detalles .container-detalles .modal-dialog .historial {
-    order: 1; /* Coloca estos elementos arriba */
-    padding: 1rem;
-  }
-
-  .section-detalles .container-detalles .modal-dialog .dates {
-    flex: 0 0 100%; /* Ocupa el ancho completo de la línea */
-    order: 2; /* Coloca este elemento abajo */
-    padding: 2rem 1rem;
-  }
-
-  .section-detalles .container-detalles .modal-dialog .historial .chat-messages{
-    min-height: 250px !important;
-  }
-}
 

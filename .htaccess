@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /mesa_it/
+
+# Evitar bucles de redirección
+RewriteCond %{REQUEST_URI} !^/mesa_it/index.php$
+
+# Reescribir las URLs amigables a la forma con parámetros
+RewriteRule ^([a-zA-Z0-9_]+)$ /mesa_it/index.php?vista=$1 [L]
