@@ -27,6 +27,6 @@
   </div>
  <h1 class="second-four">4</h1>
  <p class="wrong-para">Lo sentimos, la página o recurso que estás buscando no está disponible.</p>
- <a class="btn btn-light error404" href="http://localhost/mesa_it/index.php?vista=home">Volver al menu de Inicio</a>
+ <a class="btn btn-light error404" href="/mesa_it/home">Volver al menu de Inicio</a>
 </div>
 
